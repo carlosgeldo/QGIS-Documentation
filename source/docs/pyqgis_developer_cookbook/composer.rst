@@ -74,7 +74,7 @@ part is reported)
 
     ...
     # set layer set
-    layers = QgsMapLayerRegistry.instance().mapLayers()
+    layers = QgsMapLayerRegistry.instance().mapSettings()
     lst = layers.keys()
     render.setLayerSet(lst)
 
@@ -109,7 +109,7 @@ from :class:`QGraphicsScene`. Let us create one
 
 ::
 
-  mapRenderer = iface.mapCanvas().mapRenderer()
+  mapRenderer = iface.mapCanvas().mapSettings()
   c = QgsComposition(mapRenderer)
   c.setPlotStyle(QgsComposition.Print)
 
